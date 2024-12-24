@@ -50,4 +50,13 @@ app.use((req, res, next) => {
   res.status(404).json({ message: '404 - Not Found' });
 });
 
-app.listen(3000);
+// Port
+const port = process.env.PORT || 3001;
+console.log(`** Port - Hardcoded: ${port}`);
+console.log(`** Process Env Port: ${process.env.PORT}.`);
+
+// Server is up
+app.listen(+port, () => {
+  console.log(`** Sever is UP at http://localhost:${port}.`);
+  console.log(`***************************`);
+});
