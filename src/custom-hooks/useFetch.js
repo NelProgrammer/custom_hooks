@@ -22,7 +22,7 @@ const useFetch = (fetchFn, initialValue) => {
     fetchData();
   }, [fetchFn]);
 
-  return { isFetching, fetchedData, error };
+  return { isFetching, error, fetchedData, setFetchedData };
 };
 
 export default useFetch;
